@@ -39,6 +39,14 @@ def f(h):
 for s in range(1,80):
     print(s,f((7,s)))
 
+print('-----------------------------------------------------------------------')
+
+def p19(h):
+    return any(f(m) == 'П1' for m in moves(h))
+print([s for s in range(1, 70) if p19((7, s))])
+print([s for s in range(1, 70) if f((7, s)) == 'П2'])
+print([s for s in range(1, 70) if f((7, s)) == 'В2'])
+ 
 # 19) 18
 # 20) 31 34
 # 21) 30
