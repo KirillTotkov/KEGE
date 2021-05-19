@@ -8,7 +8,7 @@ def prime(x):
     for i in range(2,sq+1):
         if x%i==0:
             return False
-    return True
+    return x>1
 
 a=[x for x in range(2532000,2532161) if prime(x) and x%10==7]
 for i in range(len(a)):

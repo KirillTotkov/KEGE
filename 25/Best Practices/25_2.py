@@ -4,7 +4,7 @@
 
 for x in range(244143, 1367821+1):
     sq=int(x**0.5)
-    if sq**2!=x: continue
+    if sq**2!=x: continue #оптимизация
     d=set()
     for i in range(1,sq+1):
         if x%i==0:
