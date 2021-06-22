@@ -1,16 +1,8 @@
-# (№ 377) На числовой прямой даны два отрезка: P=[10,29] и Q=[13,18]. Укажите наибольшую
-# возможную длину такого отрезка A, что формула
-# ((x ∈ A) → (x ∈ P)) ∨ (x ∈ Q)
-# тождественно истинна, то есть принимает значение 1 при любом значении переменной х.
-
-p=range(10,30)
-q=range(13,19)
-def f(x,a):
-    return ((x in a)<=(x in p)) or (x in q)
-
-a=set(range(1,1000))
-
-for x in range(1,1000):
-    if not f(x,a):
-        a.remove(x)
-print(sorted(a))
+def f(a,b):
+    if a>b or a==60:
+        return 0
+    elif a==b:
+        return 1
+    else:
+        return f(a+5,b)+f(a*5,b)
+print( f(5,30)*f(30,280) )

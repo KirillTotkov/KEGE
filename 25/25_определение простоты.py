@@ -4,5 +4,5 @@ def prime(x):
         if x%i==0:
             return False
     return True
-print(prime(12))
+print(prime(2))
 print(prime(101))
